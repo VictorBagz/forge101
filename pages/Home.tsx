@@ -6,7 +6,6 @@ import {
 } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
-import AICoach from '../components/AICoach';
 import ImageSlider from '../components/ImageSlider';
 import { Program, Trainer } from '../types';
 
@@ -216,49 +215,6 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* Trainers Section */}
-      <section id="trainers" className="py-24 bg-forge-dark border-y border-gray-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row justify-between items-end mb-16">
-            <div>
-              <h2 className="font-display text-4xl md:text-5xl font-bold text-forge-text">ELITE COACHING</h2>
-              <div className="w-24 h-1 bg-forge-accent mt-4"></div>
-            </div>
-            <p className="text-forge-muted max-w-md mt-6 md:mt-0 text-right md:text-left">
-              Our coaches aren't just cheerleaders. They are certified experts dedicated to your progress.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {TRAINERS.map((trainer, idx) => (
-              <div key={idx} className="group relative overflow-hidden h-[500px] border border-gray-200 shadow-sm">
-                <img 
-                  src={trainer.image} 
-                  alt={trainer.name} 
-                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 scale-100 group-hover:scale-105"
-                />
-                {/* Dark gradient for text readability over image */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-90"></div>
-                <div className="absolute bottom-0 left-0 w-full p-8 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                  <div className="text-forge-accent text-xs font-bold uppercase tracking-wider mb-2">{trainer.role}</div>
-                  <h3 className="font-display text-3xl font-bold text-white mb-2">{trainer.name}</h3>
-                  <p className="text-gray-200 text-sm mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
-                    {trainer.bio}
-                  </p>
-                  <div className="flex flex-wrap gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-200">
-                    {trainer.specialties.map((spec, i) => (
-                      <span key={i} className="px-2 py-1 bg-white/20 text-xs text-white rounded border border-white/20">
-                        {spec}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Footer */}
       <footer className="bg-gray-900 border-t border-gray-800 pt-16 pb-8 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -325,8 +281,6 @@ const Home: React.FC = () => {
           </div>
         </div>
       </footer>
-
-      <AICoach />
     </div>
   );
 };
