@@ -3,6 +3,9 @@ import { ArrowLeft, Target, Award, Heart, Users, TrendingUp, Zap } from 'lucide-
 import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 
+// Import image
+import forge2 from '../src/assets/forge2.jpeg';
+
 const OurStory: React.FC = () => {
   return (
     <div className="bg-white min-h-screen text-forge-text">
@@ -12,7 +15,7 @@ const OurStory: React.FC = () => {
       <section className="relative h-[60vh] min-h-[500px] flex items-center justify-center overflow-hidden bg-gray-900">
         <div className="absolute inset-0 z-0">
           <img
-            src="./forge2.jpeg"
+            src={forge2}
             alt="Forge Performance Story"
             className="w-full h-full object-cover"
           />
@@ -32,7 +35,7 @@ const OurStory: React.FC = () => {
       {/* Back Button */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
         <Link 
-          to="./" 
+          to="/" 
           className="inline-flex items-center text-forge-accent hover:text-forge-accentHover font-bold uppercase tracking-wider text-sm transition-colors group"
         >
           <ArrowLeft className="mr-2 h-4 w-4 group-hover:-translate-x-1 transition-transform" />

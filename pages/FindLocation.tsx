@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { ArrowLeft, MapPin, Phone, Mail, Clock, Navigation } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
+import forge2 from '../src/assets/forge2.jpeg';
 
 const FindLocation: React.FC = () => {
   const [selectedLocation, setSelectedLocation] = useState(0);
@@ -28,7 +29,7 @@ const FindLocation: React.FC = () => {
       <section className="relative h-[60vh] min-h-[500px] flex items-center justify-center overflow-hidden bg-gray-900">
         <div className="absolute inset-0 z-0">
           <img
-            src="./forge2.jpeg"
+            src={forge2}
             alt="Find a Location"
             className="w-full h-full object-cover"
           />

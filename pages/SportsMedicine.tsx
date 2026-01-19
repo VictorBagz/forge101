@@ -2,6 +2,7 @@ import React from 'react';
 import { ArrowLeft, Heart, Zap, Shield, TrendingUp } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
+import forge2 from '../src/assets/forge2.jpeg';
 
 const SportsMedicine: React.FC = () => {
   const services = [
@@ -35,7 +36,7 @@ const SportsMedicine: React.FC = () => {
       <section className="relative h-[60vh] min-h-[500px] flex items-center justify-center overflow-hidden bg-gray-900">
         <div className="absolute inset-0 z-0">
           <img
-            src="./forge2.jpeg"
+            src={forge2}
             alt="Sports Medicine"
             className="w-full h-full object-cover"
           />

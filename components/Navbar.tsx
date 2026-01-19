@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Menu, X, ChevronDown, Search } from 'lucide-react';
 import './Navbar.css';
+import logo from '../src/assets/logo.png';
 
 const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -88,7 +89,7 @@ const Navbar: React.FC = () => {
         {/* Logo */}
         <Link to="/" className="flex items-center group mr-8">
           <img 
-            src="./logo.png" 
+            src={logo} 
             alt="Forge Performance Hub" 
             className={`h-14 w-auto object-contain transition-all duration-300 group-hover:scale-105 ${isScrolled ? 'brightness-0' : ''}`}
           />

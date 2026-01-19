@@ -1,5 +1,6 @@
 import React from 'react';
 import { ChevronRight } from 'lucide-react';
+import forge1 from '../src/assets/forge1.jpeg';
 
 const Hero: React.FC = () => {
   return (
@@ -7,7 +8,7 @@ const Hero: React.FC = () => {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img
-          src="./forge1.jpeg"
+          src={forge1}
           alt="Gym background"
           className="w-full h-full object-cover"
         />

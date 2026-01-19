@@ -2,6 +2,7 @@ import React from 'react';
 import { ArrowLeft, Zap, Target, TrendingUp, Users } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
+import forge2 from '../src/assets/forge2.jpeg';
 
 const YouthAthletes: React.FC = () => {
   const developmentAreas = [
@@ -53,7 +54,7 @@ const YouthAthletes: React.FC = () => {
       <section className="relative h-[60vh] min-h-[500px] flex items-center justify-center overflow-hidden bg-gray-900">
         <div className="absolute inset-0 z-0">
           <img
-            src="./forge2.jpeg"
+            src={forge2}
             alt="Youth Athletes"
             className="w-full h-full object-cover"
           />

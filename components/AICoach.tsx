@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Bot, X, Send, Sparkles, Loader2 } from 'lucide-react';
 import { getAIWorkoutAdvice } from '../services/geminiService';
 import { ChatMessage } from '../types';
+import logo from '../src/assets/logo.png';
 
 const AICoach: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -49,7 +50,7 @@ const AICoach: React.FC = () => {
             <div className="bg-gray-900 p-4 flex justify-between items-center border-b border-gray-800">
               <div className="flex items-center space-x-3">
                 <div className="p-1.5 bg-white/10 rounded-lg border border-white/20">
-                  <img src="./logo.png" alt="Forge AI" className="h-6 w-auto brightness-0 invert" />
+                  <img src={logo} alt="Forge AI" className="h-6 w-auto brightness-0 invert" />
                 </div>
                 <div>
                   <h3 className="font-display text-xl font-bold text-white tracking-wide">FORGE AI</h3>

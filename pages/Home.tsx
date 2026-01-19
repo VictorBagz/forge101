@@ -10,6 +10,12 @@ import AICoach from '../components/AICoach';
 import ImageSlider from '../components/ImageSlider';
 import { Program, Trainer } from '../types';
 
+// Import images
+import forge1 from '../src/assets/forge1.jpeg';
+import forge2 from '../src/assets/forge2.jpeg';
+import forge3 from '../src/assets/forge3.jpeg';
+import logo from '../src/assets/logo.png';
+
 // Constants defined here to keep file count low as per instruction
 const PROGRAMS: Program[] = [
   {
@@ -37,21 +43,21 @@ const TRAINERS: Trainer[] = [
     name: "Dennis Etuket",
     role: "Head Coach",
     bio: "Former Olympian",
-    image: "./forge1.jpeg",
+    image: forge1,
     specialties: ["Olympic Lifting", "Strength"]
   },
   {
     name: "Odongo Marvin",
     role: "Endurance Specialist",
     bio: "Ironman athlete helping members push past their mental and physical barriers.",
-    image: "./forge2.jpeg",
+    image: forge2,
     specialties: ["Cardio", "HIIT"]
   },
   {
     name: "Byron Okello",
     role: "Mobility & Recovery",
     bio: "Physiotherapy background focusing on injury prevention and longevity.",
-    image: "./forge3.jpeg",
+    image: forge3,
     specialties: ["Mobility", "Rehab"]
   }
 ];
@@ -260,7 +266,7 @@ const Home: React.FC = () => {
             <div className="col-span-1 md:col-span-1">
                <a href="#" className="flex items-center space-x-2 mb-6 group">
                 <img 
-                  src="./logo.png" 
+                  src={logo} 
                   alt="Forge Performance Hub" 
                   className="h-14 w-auto object-contain brightness-0 invert"
                 />
